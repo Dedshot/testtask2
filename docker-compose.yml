@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  grpcser:
+    container_name: grpc-server
+    build:
+      context: ./pgk
+      dockerfile: Dockerfile
+  testtask2:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - 1234:1234
+

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package webPage;
+option go_package = "/proto/api";
+
+service checkYoutube{
+  rpc Check(CheckRequest) returns (CheckResponse){}
+}
+
+message CheckRequest{
+  string key = 1;
+  string idPlay = 2;
+}
+message CheckResponse{
+  string list= 1;
+}
